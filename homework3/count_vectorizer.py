@@ -1,6 +1,6 @@
 class CountVectorizer:
     def __init__(self):
-        self.extra_symbols = '!"#$%&()*+, -./:;<=>?@[\]^_`{|}~'
+        self.extra_symbols = '!"#$%&()*+, -./:;<=>?@[]^_`{|}~'
         self.corpus = None
 
     def fit_transform(self, corpus) -> list:

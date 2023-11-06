@@ -1,7 +1,7 @@
 from typing import List, Tuple
 
 
-def fit_transform(*args: str) -> List[Tuple[str, List[int]]]:
+def fit_transform(*args: list[str]) -> List[Tuple[str, List[int]]]:
     """
     fit_transform(iterable)
     fit_transform(arg1, arg2, *args)
@@ -28,12 +28,12 @@ if __name__ == '__main__':
     from pprint import pprint
 
     cities = ['Moscow', 'New York', 'Moscow', 'London']
-    exp_transformed_cities = [
-        ('Moscow', [0, 0, 1]),
-        ('New York', [0, 1, 0]),
-        ('Moscow', [0, 0, 1]),
-        ('London', [1, 0, 0]),
+    expected_transformed_cities = [
+         ('Moscow', [0, 0, 1]),
+         ('New York', [0, 1, 0]),
+         ('Moscow', [0, 0, 1]),
+         ('London', [1, 0, 0]),
     ]
     transformed_cities = fit_transform(cities)
     pprint(transformed_cities)
-    assert transformed_cities == exp_transformed_cities
+    assert transformed_cities == expected_transformed_cities

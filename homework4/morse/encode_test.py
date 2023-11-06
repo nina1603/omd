@@ -9,8 +9,10 @@ def encode(message: str) -> str:
     ''
     >>> encode('SOS')
     '... --- ...'
-    >>> encode('HELLO WORLD') # doctest: +ELLIPSIS
+    >>> encode('HELLO WORLD')
     '.... . .-.. .-.. ---   .-- --- .-. .-.. -..'
+    >>> encode('HELLO WORLD') # doctest: +ELLIPSIS
+    '.... ... .-.. -..'
     >>> encode('Hello world') # doctest: +IGNORE_EXCEPTION_DETAIL
     Traceback (most recent call last):
     ...
